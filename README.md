@@ -12,15 +12,11 @@ Klik kiri pada mouse untuk meletakkan makanan, klik kanan untuk menghapus makana
 
 Tekan tombol `Esc` untuk keluar.
 
-Saya telah menyertakan beberapa pengaturan yang dapat diubah di bagian atas kode. Kamu dapat menyesuaikan ukuran jendela, layar penuh, FPS, dan jumlah semut yang ingin kamu munculkan. Rasio resolusi piksel pada permukaan jejak feromon juga dapat diubah, meskipun hal ini akan memengaruhi cara kerja logika pencarian jalur mereka.
+Beberapa pengaturan yang dapat diubah di bagian atas kode. Kamu dapat menyesuaikan ukuran jendela, layar penuh, FPS, dan jumlah semut yang ingin kamu munculkan. Rasio resolusi piksel pada permukaan jejak feromon juga dapat diubah, meskipun hal ini akan memengaruhi cara kerja logika pencarian jalur mereka.
 
 **Daftar hal-hal yang perlu diperbaiki/dilaksanakan:**
 - Menghindari rintangan/dinding, terutama saat menuju sarang.
 - Partikel makanan belum bisa diambil/dihapus saat semut 'mengambil' mereka.
-
-Jika kamu memiliki saran untuk meningkatkan ini, silakan hubungi saya!
-
-Untuk informasi lebih lanjut, dan pembaruan mendatang, kunjungi [halaman github](https://github.com/Nikorasu/PyNAnts "PyNAnts").
 
 ---
 
@@ -36,4 +32,4 @@ Untuk informasi lebih lanjut, dan pembaruan mendatang, kunjungi [halaman github]
         Kamu seharusnya telah menerima salinan GNU General Public License
         bersama program ini. Jika tidak, lihat: https://www.gnu.org/licenses/gpl-3.0.html
 
-##### Hak Cipta (c) 2021  Nikolaus Stromberg - nikorasu85@gmail.com
+
