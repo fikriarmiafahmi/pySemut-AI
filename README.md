@@ -1,4 +1,4 @@
-## PyNAnts
+## PySemut-AI
 
 ### Simulasi Semut ditulis dalam Python
 
