@@ -1,8 +1,8 @@
 ## PySemut-AI
 
-### Simulasi Semut ditulis dalam Python
+### Simulasi Semut menggunakan Python
 
-Ini adalah simulasi jejak feromon semut yang ditulis dalam Python3, menggunakan Pygame2 dan Numpy.
+Ini adalah simulasi jejak feromon semut menggunakan Python3 ( Pygame2 dan Numpy ).
 
 **Cara Menggunakan:**
 Simpan file `nants.py` di suatu tempat, lalu jalankan melalui Python.  
