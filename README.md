@@ -18,18 +18,3 @@ Beberapa pengaturan yang dapat diubah di bagian atas kode. Kamu dapat menyesuaik
 - Menghindari rintangan/dinding, terutama saat menuju sarang.
 - Partikel makanan belum bisa diambil/dihapus saat semut 'mengambil' mereka.
 
----
-
-        Program ini adalah perangkat lunak bebas: kamu dapat mendistribusikan ulang
-        atau memodifikasinya di bawah ketentuan GNU General Public License yang diterbitkan oleh
-        Free Software Foundation.
-
-        Program ini didistribusikan dengan harapan dapat berguna,
-        tetapi TANPA JAMINAN; bahkan tanpa jaminan tersirat
-        DIPERDAGANGKAN atau KESESUAIAN UNTUK TUJUAN TERTENTU.  Lihat
-        GNU General Public License untuk detail lebih lanjut.
-
-        Kamu seharusnya telah menerima salinan GNU General Public License
-        bersama program ini. Jika tidak, lihat: https://www.gnu.org/licenses/gpl-3.0.html
-
-
