@@ -95,9 +95,7 @@ class Semut(pg.sprite.Sprite):
                 self.desireDir += pg.Vector2(0,1).rotate(self.ang).normalize() #kanan (0, 1)
                 wandrStr = .1
             elif mid_GA_result == warnaMakanan: # jika makanan
-                self.desireDir = pg.Vector2(-1,0).rotate(self.ang).normalize() #pg.Vector2(self.sarang - self.pos).normalize()
-                #self.lastFood = self.pos + pg.Vector2(21, 0).rotate(self.ang)
-                maxSpeed = 5
+                self.desireDir = pg.Vector2(-1,0).rotate(self.ang).normalize()
                 wandrStr = .01
                 steerStr = 5
                 self.mode = 2
@@ -108,25 +106,24 @@ class Semut(pg.sprite.Sprite):
                 self.phero.img_array[scaledown_pos] += setAcolor
                 self.last_sdp = scaledown_pos
             if self.pos.distance_to(self.sarang) < 24:
-                #self.desireDir = pg.Vector2(self.lastFood - self.pos).normalize()
                 self.desireDir = pg.Vector2(-1,0).rotate(self.ang).normalize()
-                self.isMyTrail[:] = False #np.full(self.pgSize, False)
+                self.isMyTrail[:] = False
                 maxSpeed = 5
                 wandrStr = .01
                 steerStr = 5
                 self.mode = 1
-            elif mid_result[2] > max(left_result[2], right_result[2]) and mid_isID: #and mid_result[:2] == (0,0):
+            elif mid_result[2] > max(left_result[2], right_result[2]) and mid_isID:
                 self.desireDir += pg.Vector2(1,0).rotate(self.ang).normalize()
                 wandrStr = .1
-            elif left_result[2] > right_result[2] and left_isID: #and left_result[:2] == (0,0):
+            elif left_result[2] > right_result[2] and left_isID:
                 self.desireDir += pg.Vector2(1,-2).rotate(self.ang).normalize() #kiri (0,-1)
                 wandrStr = .1
-            elif right_result[2] > left_result[2] and right_isID: #and right_result[:2] == (0,0):
+            elif right_result[2] > left_result[2] and right_isID:
                 self.desireDir += pg.Vector2(1,2).rotate(self.ang).normalize() #kanan (0, 1)
                 wandrStr = .1
             else:  # mungkin pertama tambahkan ELSE IKUTI JEJAK LAIN?
                 self.desireDir += pg.Vector2(self.sarang - self.pos).normalize() * .08
-                wandrStr = .1   #pg.Vector2(self.desireDir + (1,0)).rotate(pg.math.Vector2.as_polar(self.sarang - self.pos)[1])
+                wandrStr = .1 
 
         warnaDinding = (50,50,50)  # hindari dinding dengan warna ini
         if left_GA_result == warnaDinding:
@@ -183,9 +180,9 @@ class PheroGrid():
     def __init__(self, ukuranBesar):
         self.surfSize = (int(ukuranBesar[0]/PRATIO), int(ukuranBesar[1]/PRATIO))
         self.image = pg.Surface(self.surfSize).convert()
-        self.img_array = np.array(pg.surfarray.array3d(self.image),dtype=float)#.astype(np.float64)
+        self.img_array = np.array(pg.surfarray.array3d(self.image),dtype=float)
     def update(self, dt):
-        self.img_array -= .2 * (60/FPS) * ((dt/10) * FPS) #[self.img_array > 0] # dt mungkin tidak perlu bagian FPS
+        self.img_array -= .2 * (60/FPS) * ((dt/10) * FPS)
         self.img_array = self.img_array.clip(0,255)
         pg.surfarray.blit_array(self.image, self.img_array)
         return self.image
@@ -214,8 +211,8 @@ def main():
     pg.display.set_caption("NAnts")
     try: pg.display.set_icon(pg.img.load("nants.png"))
     except: print("FYI: nants.png icon tidak ditemukan, melewati..")
-    # setup fullscreen atau window mode
-    if FLLSCRN:  #screen = pg.display.set_mode((0,0), pg.FULLSCREEN)
+
+    if FLLSCRN:
         currentRez = (pg.display.Info().current_w, pg.display.Info().current_h)
         screen = pg.display.set_mode(currentRez, pg.SCALED | pg.NOFRAME | pg.FULLSCREEN, vsync=VSYNC)
     else: screen = pg.display.set_mode((LEBAR, TINGGI), pg.SCALED, vsync=VSYNC)
@@ -223,8 +220,6 @@ def main():
     cur_w, cur_h = screen.get_size()
     ukuranLayar = (cur_w, cur_h)
     sarang = (cur_w/3, cur_h/2)
-
-    #background = pg.img.load("background.png").convert_alpha()
 
     pekerja = pg.sprite.Group()
     pheroLayer = PheroGrid(ukuranLayar)
@@ -244,7 +239,7 @@ def main():
                 return
             elif e.type == pg.MOUSEBUTTONDOWN:
                 mousepos = pg.mouse.get_pos()
-                if e.button == 1: # and pg.Vector2(mousepos).distance_to(sarang) > 242:
+                if e.button == 1:
                     foodBits = 200
                     fRadius = 50
                     for i in range(0, foodBits): # spawn bit makanan secara merata dalam lingkaran
