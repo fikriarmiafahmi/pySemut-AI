@@ -5,8 +5,8 @@
 Ini adalah simulasi jejak feromon semut menggunakan Python3 ( Pygame2 dan Numpy ).
 
 **Cara Menggunakan:**
-Simpan file `nants.py` di suatu tempat, lalu jalankan melalui Python.  
-(Contoh perintah menjalankan: `python3 nants.py`)
+Simpan file `semut.py` di suatu tempat, lalu jalankan melalui Python.  
+(Contoh perintah menjalankan: `python semut.py`)
 
 Klik kiri pada mouse untuk meletakkan makanan, klik kanan untuk menghapus makanan.
 
